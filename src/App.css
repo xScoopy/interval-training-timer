@@ -31,3 +31,15 @@
   font-size: x-large;
   padding: 0.5rem;
 }
+
+.InfoDisplay {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+}
+
+.TimerDisplays {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
