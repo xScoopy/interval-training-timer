@@ -1,6 +1,10 @@
 .App {
   text-align: center;
 }
+.App > div > h1 {
+  margin-top: 2rem;
+  font-style: italic;
+}
 
 .InputLabel {
   display: flex;
