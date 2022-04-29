@@ -1,6 +1,8 @@
 import StartButton from "./StartButton";
+import { useDispatch } from "react-redux";
 
 const SetupMenu = () => {
+  const dispatch = useDispatch()
   return (
     <div>
       <h1>H.I.I.T. Timer</h1>
@@ -11,6 +13,7 @@ const SetupMenu = () => {
             type={"number"}
             className="InputField"
             placeholder={"Total intervals"}
+            onChange={(e)=> dispatch(setInterval(e.target.value))}
           />
         </label>
         <label className="InputLabel">
