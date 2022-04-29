@@ -1,8 +1,9 @@
-const CurrentInterval = () => {
+
+const CurrentInterval = (props) => {
   return (
     <div className="infoDisplay">
       <div>Current Interval</div>
-      <div>1 of 6</div>
+      <div>{props.currentInterval} of {props.totalInterval}</div>
     </div>
   );
 };

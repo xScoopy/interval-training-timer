@@ -1,11 +1,11 @@
 import { CURRENT_INTERVAL_INCREMENT, SET_INTERVAL } from "../actions";
 
-const intervalReducer = (state = {}, action) => {
+const intervalReducer = (state = {totalInterval:12, currentInterval:1}, action) => {
     switch(action.type) {
         case SET_INTERVAL:
             return {
                 ...state, 
-                totalIntervals : action.payload.intervalCount
+                totalInterval : action.payload.intervalCount
             }
         case CURRENT_INTERVAL_INCREMENT:
             return {
