@@ -1,5 +1,6 @@
 import StartButton from "./StartButton";
 import { useDispatch } from "react-redux";
+import { setActive, setRest, setInterval } from "./actions";
 
 const SetupMenu = () => {
   const dispatch = useDispatch()
@@ -13,7 +14,7 @@ const SetupMenu = () => {
             type={"number"}
             className="InputField"
             placeholder={"Total intervals"}
-            onChange={(e)=> dispatch(setInterval(e.target.value))}
+            onChange={(e)=> {dispatch(setInterval(e.target.value))} }
           />
         </label>
         <label className="InputLabel">
@@ -22,6 +23,7 @@ const SetupMenu = () => {
             type={"number"}
             className="InputField"
             placeholder={"Total seconds"}
+            onChange={(e) => {dispatch(setActive(e.target.value))}}
           />
         </label>
         <label className="InputLabel">
@@ -30,6 +32,7 @@ const SetupMenu = () => {
             type={"number"}
             className="InputField"
             placeholder={"Total seconds"}
+            onChange={(e) => {dispatch(setRest(e.target.value))}}
           />
         </label>
       </div>
