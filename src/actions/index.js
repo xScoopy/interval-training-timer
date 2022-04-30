@@ -58,3 +58,17 @@ export const currentRestDecrement = () => {
     type: CURRENT_REST_DECREMENT,
   };
 };
+
+export const SWAP_CURRENT_ACTIVITY = "SWAP_CURRENT_ACTIVITY";
+export const swapCurrentActivity = () => {
+  return {
+    type: SWAP_CURRENT_ACTIVITY,
+  };
+};
+
+export const TOGGLE_TRAINING = "TOGGLE_TRAINING"
+export const toggleTraining = () => {
+    return {
+        type: TOGGLE_TRAINING
+    }
+}
