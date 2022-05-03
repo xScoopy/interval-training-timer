@@ -1,6 +1,6 @@
-import { CURRENT_ACTIVE, CURRENT_REST, CURRENT_ACTIVE_DECREMENT, SET_ACTIVE, SET_REST, CURRENT_REST_DECREMENT } from "../actions";
+import { CURRENT_ACTIVE, CURRENT_REST, CURRENT_ACTIVE_DECREMENT, SET_ACTIVE, SET_REST, CURRENT_REST_DECREMENT, INCREMENT_ELAPSED } from "../actions";
 
-const TimerReducer = (state = { activeLength:120, restLength:60}, action) => {
+const TimerReducer = (state = { activeLength:120, restLength:60, totalElapsed:0}, action) => {
     switch(action.type) {
         case SET_ACTIVE:
             return {
@@ -31,6 +31,11 @@ const TimerReducer = (state = { activeLength:120, restLength:60}, action) => {
             return {
                 ...state,
                 currentRest: state.currentRest - 1
+            }
+        case INCREMENT_ELAPSED:
+            return {
+                ...state,
+                totalElapsed: state.totalElapsed + 1
             }
         default:
             return state

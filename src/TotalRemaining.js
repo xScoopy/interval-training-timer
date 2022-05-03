@@ -1,8 +1,8 @@
-const TotalRemaining = () => {
+const TotalRemaining = (props) => {
   return (
     <div className="InfoDisplay">
       <div>Total remaining</div>
-      <div>17:59</div>
+      <div>{props.remaining}</div>
     </div>
   );
 };

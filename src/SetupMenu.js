@@ -14,7 +14,7 @@ const SetupMenu = () => {
             type={"number"}
             className="InputField"
             placeholder={"Total intervals"}
-            onChange={(e)=> {dispatch(setInterval(e.target.value))} }
+            onChange={(e)=> {dispatch(setInterval(parseInt(e.target.value)))} }
           />
         </label>
         <label className="InputLabel">
@@ -23,7 +23,7 @@ const SetupMenu = () => {
             type={"number"}
             className="InputField"
             placeholder={"Total seconds"}
-            onChange={(e) => {dispatch(setActive(e.target.value))}}
+            onChange={(e) => {dispatch(setActive(parseInt(e.target.value)))}}
           />
         </label>
         <label className="InputLabel">
@@ -32,7 +32,7 @@ const SetupMenu = () => {
             type={"number"}
             className="InputField"
             placeholder={"Total seconds"}
-            onChange={(e) => {dispatch(setRest(e.target.value))}}
+            onChange={(e) => {dispatch(setRest(parseInt(e.target.value)))}}
           />
         </label>
       </div>

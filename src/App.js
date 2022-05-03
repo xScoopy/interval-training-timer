@@ -6,6 +6,9 @@ import { useSelector } from "react-redux";
 
 function App() {
   const isStarted = useSelector((state) => state.activity.isStarted);
+
+
+
   return (
     <div className="App">{isStarted ? <TimerSection /> : <SetupMenu />}</div>
   );

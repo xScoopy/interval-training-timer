@@ -66,9 +66,16 @@ export const swapCurrentActivity = () => {
   };
 };
 
-export const TOGGLE_TRAINING = "TOGGLE_TRAINING"
+export const TOGGLE_TRAINING = "TOGGLE_TRAINING";
 export const toggleTraining = () => {
-    return {
-        type: TOGGLE_TRAINING
-    }
-}
+  return {
+    type: TOGGLE_TRAINING,
+  };
+};
+
+export const INCREMENT_ELAPSED = "INCREMENT_ELAPSED";
+export const incrementElapsed = () => {
+  return {
+    type: INCREMENT_ELAPSED,
+  };
+};
