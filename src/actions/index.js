@@ -45,27 +45,6 @@ export const currentRest = (length) => {
   };
 };
 
-export const CURRENT_ACTIVE_DECREMENT = "CURRENT_ACTIVE_DECREMENT";
-export const currentActiveDecrement = () => {
-  return {
-    type: CURRENT_ACTIVE_DECREMENT,
-  };
-};
-
-export const CURRENT_REST_DECREMENT = "CURRENT_REST_DECREMENT";
-export const currentRestDecrement = () => {
-  return {
-    type: CURRENT_REST_DECREMENT,
-  };
-};
-
-export const SWAP_CURRENT_ACTIVITY = "SWAP_CURRENT_ACTIVITY";
-export const swapCurrentActivity = () => {
-  return {
-    type: SWAP_CURRENT_ACTIVITY,
-  };
-};
-
 export const TOGGLE_TRAINING = "TOGGLE_TRAINING";
 export const toggleTraining = () => {
   return {
@@ -73,9 +52,18 @@ export const toggleTraining = () => {
   };
 };
 
-export const INCREMENT_ELAPSED = "INCREMENT_ELAPSED";
-export const incrementElapsed = () => {
+export const UPDATE = "UPDATE"
+export const update = (deltaTime) => {
   return {
-    type: INCREMENT_ELAPSED,
-  };
-};
+    type: UPDATE,
+    payload: { deltaTime }
+  }
+}
+
+export const SET_TOTAL_REMAINING = "SET_TOTAL_REMAINING"
+export const setTotalRemaining = (totalRemaining) => {
+  return {
+    type: SET_TOTAL_REMAINING,
+    payload: { totalRemaining }
+  }
+}

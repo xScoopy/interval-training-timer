@@ -23,7 +23,7 @@ const SetupMenu = () => {
             type={"number"}
             className="InputField"
             placeholder={"Total seconds"}
-            onChange={(e) => {dispatch(setActive(parseInt(e.target.value)))}}
+            onChange={(e) => {dispatch(setActive(parseInt(e.target.value * 1000)))}}
           />
         </label>
         <label className="InputLabel">
@@ -32,7 +32,7 @@ const SetupMenu = () => {
             type={"number"}
             className="InputField"
             placeholder={"Total seconds"}
-            onChange={(e) => {dispatch(setRest(parseInt(e.target.value)))}}
+            onChange={(e) => {dispatch(setRest(parseInt(e.target.value * 1000)))}}
           />
         </label>
       </div>
