@@ -76,6 +76,8 @@ const TimerReducer = (
             return {
               ...state,
               isStarted: false,
+              isActive: !state.isActive,
+              totalElapsed: 0
             };
           }
           return {

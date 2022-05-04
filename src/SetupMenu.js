@@ -1,9 +1,10 @@
 import StartButton from "./StartButton";
 import { useDispatch } from "react-redux";
-import { setActive, setRest, setInterval } from "./actions";
+import { setActive, setRest, setInterval, resetCurrentInterval } from "./actions";
 
 const SetupMenu = () => {
   const dispatch = useDispatch()
+  dispatch(resetCurrentInterval())
   return (
     <div>
       <h1>H.I.I.T. Timer</h1>

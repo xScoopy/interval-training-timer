@@ -5,7 +5,7 @@ import TotalElapsed from "./TotalElapsed";
 import TotalRemaining from "./TotalRemaining";
 import ImageSection from "./ImageSection";
 import { useDispatch, useSelector } from "react-redux";
-import { currentIntervalIncrement, resetCurrentInterval } from "./actions";
+import { currentIntervalIncrement } from "./actions";
 import useSound from "use-sound";
 import bellSound from "./media/bellSound.wav"
 
@@ -25,6 +25,7 @@ const TimerSection = () => {
   const totalElapsed = useSelector((state) => state.timers.totalElapsed);
   const timeRemaining = useSelector((state) => state.timers.totalRemaining);
   //show time left for appropriate activity
+
   const timeLeft = isActive ? currentActiveTime : currentRestTime;
   
 
@@ -33,9 +34,7 @@ const TimerSection = () => {
     dispatch(currentIntervalIncrement())
   }
 
-  // if (timeRemaining <= 0){
-  //   dispatch(resetCurrentInterval())
-  // }
+
 
   return (
     <div>
