@@ -13,6 +13,13 @@ export const currentIntervalIncrement = () => {
   };
 };
 
+export const RESET_CURRENT_INTERVAL = "RESET_CURRENT_INTERVAL"
+export const resetCurrentInterval = () => {
+  return {
+    type: RESET_CURRENT_INTERVAL
+  }
+}
+
 export const SET_ACTIVE = "SET_ACTIVE";
 export const setActive = (length) => {
   return {
