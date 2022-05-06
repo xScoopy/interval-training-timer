@@ -28,9 +28,11 @@ const TimerSection = () => {
 
   const timeLeft = isActive ? currentActiveTime : currentRestTime;
   
-
-  if (totalElapsed >= (currentInterval * (activeLength + restLength))){
+  if (timeLeft < 11) {
     play()
+  }  
+  if (totalElapsed >= (currentInterval * (activeLength + restLength))){
+    // play()
     dispatch(currentIntervalIncrement())
   }
 
