@@ -22,17 +22,9 @@ function App() {
       return () => clearInterval(interval)
     } 
   }, [dispatch, isStarted])
-  // if (isStarted) {
-  //   let lastUpdateTime = Date.now();
-  //   setInterval(() => {
-  //     const now = Date.now();
-  //     const deltaTime = now - lastUpdateTime;
-  //     lastUpdateTime = now;
-  //     dispatch(update(deltaTime));
-  //   }, 50);
-  // }
+
   return (
-    <div className="App">{isStarted ? <TimerSection /> : <SetupMenu />}</div>
+    <div className="App bg-slate">{isStarted ? <TimerSection /> : <SetupMenu />}</div>
   );
 }
 

@@ -1,8 +1,8 @@
 const TotalElapsed = (props) => {
   return (
     <div className="InfoDisplay">
-      <div>Total elapsed</div>
-      <div>{props.elapsed}</div>
+      <div className="elapsedTitle">Total elapsed</div>
+      <div className="elapsedInfo">{props.elapsed}</div>
     </div>
   );
 };

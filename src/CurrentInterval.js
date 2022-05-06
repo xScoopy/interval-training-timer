@@ -2,8 +2,8 @@
 const CurrentInterval = (props) => {
   return (
     <div className="infoDisplay">
-      <div>Current Interval</div>
-      <div>{props.currentInterval} of {props.totalInterval}</div>
+      <div className="intervalTitle">Current Interval</div>
+      <div className="intervalInfo">{props.currentInterval} of {props.totalInterval}</div>
     </div>
   );
 };

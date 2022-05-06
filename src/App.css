@@ -1,9 +1,12 @@
 .App {
   text-align: center;
+  background-color: lightgray;
+  height: 100vh;
 }
 .App > div > h1 {
   margin-top: 2rem;
   font-style: italic;
+  text-shadow: 1px 1px 0px #1E9EE6, 2px 2px 0px rgba(0,0,0,0.25);
 }
 
 .InputLabel {
@@ -17,6 +20,12 @@
   flex-direction: row;
   justify-content: center;
   text-align: center;
+
+}
+label {
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px black;
+  margin-right: 1rem;
 }
 
 .InputField {
@@ -30,16 +39,66 @@
   border-radius: 50%;
   font-size: x-large;
   padding: 0.5rem;
+  border-radius: 10px;
+  box-shadow: 5px 5px 6px black;
+  margin-top: 2rem;
 }
 
 .InfoDisplay {
   display: flex;
   flex-direction: column;
   padding: 2rem;
+  margin: 2rem;
+  justify-content: center;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 2px 2px 4px black;
+
 }
 
 .TimerDisplays {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  
+}
+
+.intervalTitle {
+  font-size: large;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.intervalInfo {
+  font-size: x-large;
+  font-weight: bolder;
+}
+
+.elapsedInfo {
+  font-size: x-large;
+  font-weight: bold;
+  color: darkgreen;
+}
+.elapsedTitle {
+  font-size: large;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+.remainingTitle {
+  font-size: large;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+.remainingInfo {
+  font-size: x-large;
+  font-weight: bold;
+  color: darkred;
+}
+
+img {
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px black;
 }

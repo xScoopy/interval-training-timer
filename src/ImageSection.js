@@ -3,10 +3,8 @@ import restPic from "./media/stick_rest.png";
 
 const ImageSection = (props) => {
   return (
-    <div>
+    <div className="flex items-center">
       {props.active ? <img src={activePic} alt="active" /> : <img src={restPic} alt="rest" /> }
-      
-      
     </div>
   );
 };
